@@ -2,11 +2,11 @@
 
 import Image from "next/image";
 import styles from "./page.module.css";
-import company_logo from "./company_logo.png";
+import company_logo from "./assets/company_logo.png";
 import './home.css'
-import img1 from './1.png';
-import img2 from './2.png';
-import img3 from './3.png';
+import img1 from './assets/1.png';
+import img2 from './assets/2.png';
+import img3 from './assets/3.png';
 import React, { useState, useEffect } from "react";
 import { HardHat, Truck, Building, CheckCircle, Award, MapPin, Phone, Mail, AwardIcon, MapIcon, PhoneIcon, MailIcon } from 'lucide-react';
 
@@ -21,18 +21,21 @@ export default function Home() {
       description: "LTPS INFRA PVT. LTD. - Your trusted partner in infrastructure development",
       buttonText: "Get Started",
       image: img1,
+      page: "Services",
     },
     {
       title: "Expert Infrastructure Solutions",
       description: "Delivering quality projects for over 15 years",
       buttonText: "Learn More",
       image: img2,
+      page: "Projects",
     },
     {
       title: "Innovative Engineering Services",
       description: "Committed to safety, quality, and sustainability",
       buttonText: "Contact Us",
       image: img3,
+      page: "Contact",
     },
   ];
 
@@ -61,11 +64,11 @@ export default function Home() {
                     <span>LTPS INFRA PVT. LTD.</span>
                 </div>
                 <div class="nav-links">
-                    <a href="#">Home</a>
-                    <a href="#">Services</a>
-                    <a href="#">Projects</a>
-                    <a href="#">About Us</a>
-                    <a href="#">Contact</a>
+                    <a href="/">Home</a>
+                    <a href="Services">Services</a>
+                    <a href="Projects">Projects</a>
+                    <a href="About">About Us</a>
+                    <a href="Contact">Contact</a>
                 </div>
             </div>
         </div>
@@ -81,7 +84,7 @@ export default function Home() {
               <div className="hero-content">
                 <h1>{slide.title}</h1>
                 <p>{slide.description}</p>
-                <a href="#" className="hero-button">{slide.buttonText}</a>
+                <a href={slide.page} className="hero-button">{slide.buttonText}</a>
                 {/* Add the image with lower opacity */}
                 <Image src={slide.image} alt={slide.title} className="carousel-image" />
               </div>
