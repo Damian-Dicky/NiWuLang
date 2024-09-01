@@ -3,15 +3,16 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import company_logo from "./assets/company_logo.png";
-import './home.css'
+import './CSS/home.css'
 import img1 from './assets/1.png';
 import img2 from './assets/2.png';
 import img3 from './assets/3.png';
 import React, { useState, useEffect } from "react";
 import { HardHat, Truck, Building, CheckCircle, Award, MapPin, Phone, Mail, AwardIcon, MapIcon, PhoneIcon, MailIcon } from 'lucide-react';
+import Map from "./map";
 
 export default function Home() {
-
+  const [map, setMap] = useState(null);
   const [currentSlide, setCurrentSlide] = useState(0);
 
   // Array of slides to be displayed in the carousel
@@ -177,14 +178,19 @@ export default function Home() {
             </div>
         </div>
     </div>
-
+    
+  
     <div class="contact">
         <div class="contact-container">
             <h2>Contact Us</h2>
             <div class="contact-info">
                 <div class="info">
                     <div class="icon"><MapIcon/></div>
-                    <p>113, A-Wing, Sai Arcade, Opp. Panvel ST Stand, Panvel, Dist. Raigad</p>
+                    <p>
+                        113, A-Wing, Sai Arcade, Opp. Panvel ST Stand, Panvel, Dist. Raigad
+                    </p>
+                    <Map/>
+                    
                 </div>
                 <div class="info">
                     <div class="icon"><PhoneIcon/></div>
