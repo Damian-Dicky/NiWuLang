@@ -137,15 +137,15 @@ export default function Map() {
           attribution='&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
           url='https://tile.openstreetmap.org/{z}/{x}/{y}.png'
         />
-        <MinimapControl position="bottomleft" />
+        {/* <MinimapControl position="bottomleft" /> */}
         <Marker icon={DefaultIcon} position={[18.98878, 73.11013]}>
         <Popup>
-            <div>
+            <div className='Popup'>
                 <h3>LTPS INFRA  PVT. LTD</h3>
                 <small>Real estate builders & construction company in Navi Mumbai, Maharashtra</small>
-                <p>113, A-Wing, Sai Arcade, Opp. Panvel ST Stand, Panvel, Dist. Raigad</p>
-                <p>9323823009 / 9537577777</p>
-                <Button text="Get Directions" onClick={() => alert('Directions')} />
+                <Button text="Get Directions" onClick={() => {
+                  window.open("https://www.google.com/maps/place/LTPS+INFRA+PVT.+LTD./@18.9891787,73.0973022,15z/data=!4m10!1m2!2m1!1sLTPS+INFRA+PVT.+LTD.!3m6!1s0x3be7e9ee1aafb5e5:0xf82b2259682d59a0!8m2!3d18.9916788!4d73.1150298!15sChRMVFBTIElORlJBIFBWVC4gTFRELloUIhJsdHBzIGluZnJhIHB2dCBsdGSSARRjb25zdHJ1Y3Rpb25fY29tcGFueeABAA!16s%2Fg%2F11rtvkbj7j?entry=ttu&g_ep=EgoyMDI0MDgyOC4wIKXMDSoASAFQAw%3D%3D");
+                }} />
             </div>
         </Popup>
       </Marker>
