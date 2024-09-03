@@ -144,7 +144,7 @@ export default function Map() {
                 <h3>LTPS INFRA  PVT. LTD</h3>
                 <small>Real estate builders & construction company in Navi Mumbai, Maharashtra</small>
                 <Button text="Get Directions" onClick={() => {
-                  window.open("https://www.google.com/maps/place/LTPS+INFRA+PVT.+LTD./@18.9891787,73.0973022,15z/data=!4m10!1m2!2m1!1sLTPS+INFRA+PVT.+LTD.!3m6!1s0x3be7e9ee1aafb5e5:0xf82b2259682d59a0!8m2!3d18.9916788!4d73.1150298!15sChRMVFBTIElORlJBIFBWVC4gTFRELloUIhJsdHBzIGluZnJhIHB2dCBsdGSSARRjb25zdHJ1Y3Rpb25fY29tcGFueeABAA!16s%2Fg%2F11rtvkbj7j?entry=ttu&g_ep=EgoyMDI0MDgyOC4wIKXMDSoASAFQAw%3D%3D");
+                  global.window.open("https://www.google.com/maps/place/LTPS+INFRA+PVT.+LTD./@18.9891787,73.0973022,15z/data=!4m10!1m2!2m1!1sLTPS+INFRA+PVT.+LTD.!3m6!1s0x3be7e9ee1aafb5e5:0xf82b2259682d59a0!8m2!3d18.9916788!4d73.1150298!15sChRMVFBTIElORlJBIFBWVC4gTFRELloUIhJsdHBzIGluZnJhIHB2dCBsdGSSARRjb25zdHJ1Y3Rpb25fY29tcGFueeABAA!16s%2Fg%2F11rtvkbj7j?entry=ttu&g_ep=EgoyMDI0MDgyOC4wIKXMDSoASAFQAw%3D%3D");
                 }} />
             </div>
         </Popup>

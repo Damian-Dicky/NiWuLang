@@ -1,9 +1,9 @@
-*{}
+
 
 body {
     margin: 0;
     color: #333;
-    background-color: #f3f3f3;
+    background-color: white;
 }
 
 .container {
@@ -154,7 +154,7 @@ body {
 } */
 
 .hero-container {
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
 }
 
@@ -171,24 +171,31 @@ body {
 /* Info Section */
 .info {
     background-color: #f7f7f7;
-    padding: 40px 16px;
+    padding: 16px 16px;
 }
 
 .info-container {
-    max-width: 1200px;
+    
     margin: 0 auto;
+    text-align:start;
+}
+
+.info-container h2{
     text-align: center;
+}
+
+.info-container p{
+    text-align: justify;
 }
 
 .info h2 {
     font-size: 32px;
-    margin-bottom: 20px;
     color: #333;
 }
 
 .info p {
     font-size: 18px;
-    line-height: 1.6;
+
     color: #555;
     margin-bottom: 16px;
 }
@@ -240,14 +247,36 @@ body {
     margin-bottom: 12px;
 }
 
+.contact-sub-container{
+    display: block;
+}
+
+.map{
+    flex: 1;
+}
+
+.contact-info .info{
+    flex: 1;
+   
+}
+
+
 .footer {
     background-color: #1e3a8a;
     color: white;
-    padding: 32px 16px;
+    padding: 4px 8px;
     text-align: center;
 }
 
 .footer-container {
     max-width: 1200px;
     margin: 0 auto;
+}
+
+
+@media screen and (min-width: 768px) {
+    .contact-sub-container{
+        display: flex;
+    }
+    
 }
