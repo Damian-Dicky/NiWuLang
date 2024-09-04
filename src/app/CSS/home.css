@@ -223,6 +223,12 @@ body {
     transition: all 1s;
 }
 
+.testimonials .testimonials-container h2{
+    font-size: 32px;
+    margin-bottom: 32px;
+    text-align: center;
+}
+
 .service-cards, .project-cards, .feature-cards {
     display: grid;
     gap: 32px;
@@ -245,6 +251,13 @@ body {
 .service-card h3, .project-card h3, .feature-card h3 {
     font-size: 20px;
     margin-bottom: 12px;
+}
+
+.testimonals-client{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
 }
 
 .contact-sub-container{

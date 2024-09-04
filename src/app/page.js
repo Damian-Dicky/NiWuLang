@@ -9,10 +9,13 @@ import img1 from './assets/1.png';
 import img2 from './assets/2.png';
 import img3 from './assets/3.png';
 import React, { useState, useEffect } from "react";
+import Clients from "./static/Clients";
 import { HardHat, Truck, Building, CheckCircle, Award, MapPin, Phone, Mail, AwardIcon, MapIcon, PhoneIcon, MailIcon } from 'lucide-react';
 import BlurFade from "@/components/magicui/blur-fade";
 import TypingAnimation from "@/components/magicui/typing-animation";
 import NumberTicker from "@/components/magicui/number-ticker";
+import Marquee from "@/components/magicui/marquee";
+import MarqueeCard from "./Components/Marquee";
 
 const Maps = dynamic(() => import('./map'), {
   ssr: false
@@ -22,7 +25,6 @@ export default function Home() {
   const [map, setMap] = useState(null);
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  // Array of slides to be displayed in the carousel
   const slides = [
     {
       title: "Building the Future, One Project at a Time",
@@ -126,7 +128,7 @@ export default function Home() {
 </BlurFade>
     
 
-<BlurFade delay={0.5} inView>
+<BlurFade delay={0.25} inView>
     <div className="services">
         <div className="services-container">
             <h2>Our Services</h2>
@@ -157,7 +159,7 @@ export default function Home() {
     </div>
 </BlurFade>
 
-<BlurFade delay={0.75} inView>
+<BlurFade delay={0.25} inView>
     <div className="projects">
         <div className="projects-container">
             <h2>Featured Projects</h2>
@@ -179,6 +181,17 @@ export default function Home() {
     </div>
 </BlurFade>
 
+<BlurFade delay={0.25} inView>
+    <div className="testimonials">
+        <div className="testimonials-container">
+            <h2>Our Customers</h2>
+            <MarqueeCard/>
+            
+        </div>
+    </div>
+</BlurFade>
+
+<BlurFade delay={0.25} inView>
     <div className="about-us">
         <div className="about-us-container">
             <h2>Why Choose Us</h2>
@@ -196,8 +209,9 @@ export default function Home() {
             </div>
         </div>
     </div>
-    
+</BlurFade>
   
+<BlurFade delay={0.25} inView>
     <div className="contact">
         <div className="contact-container">
             <h2>Contact Us</h2>
@@ -227,6 +241,7 @@ export default function Home() {
             
         </div>
     </div>
+</BlurFade>
 
     <footer className="footer">
         <div className="footer-container">
