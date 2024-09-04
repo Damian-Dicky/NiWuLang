@@ -8,7 +8,7 @@
   
   .marquee {
     display: flex;
-    width: 200%; /* Adjust based on your needs */
+    width: 200%; 
     animation: marquee 30s linear infinite;
   }
   
