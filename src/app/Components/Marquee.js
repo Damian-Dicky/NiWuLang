@@ -15,7 +15,7 @@ export default function MarqueeCard(props) {
           <div className="marquee-item" key={index}>
             <Box>
             <Image src={item.image} alt={item.name} className="marquee-image" width={150} height={120}/>
-            <span className="marquee-name">{item.name}</span>
+            {/* <span className="marquee-name">{item.name}</span> */}
             </Box>
           </div>
         ))}

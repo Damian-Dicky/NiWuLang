@@ -10,12 +10,14 @@ import img2 from './assets/2.png';
 import img3 from './assets/3.png';
 import React, { useState, useEffect } from "react";
 import Clients from "./static/Clients";
-import { HardHat, Truck, Building, CheckCircle, Award, MapPin, Phone, Mail, AwardIcon, MapIcon, PhoneIcon, MailIcon } from 'lucide-react';
+import { HardHat, Truck, Building, CheckCircle, Award, MapPin, Phone, Mail, AwardIcon, MapIcon, PhoneIcon, MailIcon, ShieldCheck, KeyRound, Leaf } from 'lucide-react';
 import BlurFade from "@/components/magicui/blur-fade";
 import TypingAnimation from "@/components/magicui/typing-animation";
 import NumberTicker from "@/components/magicui/number-ticker";
 import Marquee from "@/components/magicui/marquee";
 import MarqueeCard from "./Components/Marquee";
+import WorkingAreas from "./static/WorkingAreas";
+import SlideCard from "./Components/SlideCard";
 
 const Maps = dynamic(() => import('./map'), {
   ssr: false
@@ -192,6 +194,16 @@ export default function Home() {
 </BlurFade>
 
 <BlurFade delay={0.25} inView>
+    <div className="testimonials">
+        <div className="testimonials-container">
+            <h2>Our Working Areas</h2>
+            <SlideCard works={WorkingAreas} />
+            
+        </div>
+    </div>
+</BlurFade>
+
+<BlurFade delay={0.25} inView>
     <div className="about-us">
         <div className="about-us-container">
             <h2>Why Choose Us</h2>
@@ -207,6 +219,24 @@ export default function Home() {
                     <p>Over a decade of expertise in infrastructure development</p>
                 </div>
             </div>
+
+<br></br>
+            <div className="feature-cards">
+                <div className="feature-card">
+                    <div className="icon"><KeyRound/></div>
+                    <h3>Safety</h3>
+                    <p>We prioritize the safety of our employees, subcontractors, and the
+                    public on every project. </p>
+                </div>
+                <div className="feature-card">
+                    <div className="icon"><Leaf/></div>
+                    <h3>Sustainability</h3>
+                    <p>We are committed to incorporating sustainable practices and
+                    materials into our projects whenever possible </p>
+                </div>
+            </div>
+
+           
         </div>
     </div>
 </BlurFade>
