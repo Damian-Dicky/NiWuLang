@@ -18,6 +18,8 @@ import Marquee from "@/components/magicui/marquee";
 import MarqueeCard from "./Components/Marquee";
 import WorkingAreas from "./static/WorkingAreas";
 import SlideCard from "./Components/SlideCard";
+import Navbar from "./Components/Navbar";
+import Button from "./Components/Button";
 
 const Maps = dynamic(() => import('./map'), {
   ssr: false
@@ -68,23 +70,7 @@ export default function Home() {
   return (
     <div className="container">
 
-    <nav className="nav">
-        <div className="nav-container">
-            <div className="nav-content">
-                <div className="logo">
-                    <Image src={company_logo} width={35} height={30} alt="LTPS INFRA PVT. LTD." />
-                    <span>LTPS INFRA PVT. LTD.</span>
-                </div>
-                <div className="nav-links">
-                    <a href="#">Home</a>
-                    <a href="Services">Services</a>
-                    <a href="Projects">Projects</a>
-                    <a href="About">About Us</a>
-                    <a href="Contact">Contact</a>
-                </div>
-            </div>
-        </div>
-    </nav>
+   <Navbar  />
 
     <div className="hero">
         <div className="carousel-container">
@@ -105,14 +91,14 @@ export default function Home() {
               </div>
             </div>
           ))}
-          <div className="carousel-buttons">
+          {/* <div className="carousel-buttons">
             <button className="prev-btn" onClick={() => moveSlide(-1)}>
               &#10094;
             </button>
             <button className="next-btn" onClick={() => moveSlide(1)}>
               &#10095;
             </button>
-          </div>
+          </div> */}
         </div>
       </div>
 
@@ -120,12 +106,16 @@ export default function Home() {
 <BlurFade delay={0.25} inView>
 <div className="info">
         <div className="info-container">
-            <h2>Welcome to LTPS INFRA</h2>
-            <p>LTPS INFRA PVT. LTD. is a leading infrastructure development company based in Panvel, Maharashtra. We specialize in earth works, transportation, and infrastructure projects. Our team of experienced professionals is committed to delivering projects on time, within budget, and exceeding client expectations.</p>
-            <p>Our premier infrastructure development company has over <NumberTicker value={15}></NumberTicker> years of experience in delivering high-quality projects across various sectors. Specializing in earthworks, road construction, dam works, and infrastructure development for highways and townships, we provide comprehensive solutions tailored to meet the unique needs of our clients. Our expertise extends to heavy-duty transportation, excavation, canal and port works, and advanced civil engineering projects, including scientific and eco-friendly methods for land reclamation and compaction.</p>
-            <p>
-            With a commitment to quality, safety, sustainability, and client satisfaction, we strive to exceed expectations on every project. Our skilled team, equipped with state-of-the-art machinery, ensures timely and budget-conscious delivery. At LTPS INFRA PVT. LTD., we are dedicated to building a better future, one project at a time, while actively promoting eco-friendly practices through our Go-Green initiatives.</p>
-        </div>
+            
+            <p>Over 15 years of experience, we specialize in providing high-quality construction solutions for residential, commercial, and industrial projects. Our team of skilled professionals is committed to delivering excellence, safety, and innovation in every project we undertake. LTPS INFRA PVT. LTD. We believe in building not only structures but also long-lasting relationships with our clients. Trust us to turn your dreams into reality and make your construction journey seamless and rewarding. 
+                <br></br>
+                <br></br>
+                Contact us today to discuss your upcoming project, and let's build a future together!</p>
+            <div className="info-btn">
+            <Button text={"Start Now!"}></Button>
+
+            </div>
+            </div>
     </div>
 </BlurFade>
     
@@ -250,7 +240,7 @@ export default function Home() {
                <Maps/>
             </div>
             <div className="contact-info">
-                <div className="info">
+                <div className="sub-contact-info">
                     <div className="icon"><MapIcon/></div>
                     <p>
                         113, A-Wing, Sai Arcade, Opp. Panvel ST Stand, Panvel, Dist. Raigad
@@ -258,11 +248,11 @@ export default function Home() {
                   
                     
                 </div>
-                <div className="info">
+                <div className="sub-contact-info">
                     <div className="icon"><PhoneIcon/></div>
                     <p>9323823009 / 9537577777</p>
                 </div>
-                <div className="info">
+                <div className="sub-contact-info">
                     <div className="icon"><MailIcon/></div>
                     <p>ltpsinfra@gmail.com</p>
                 </div>

@@ -3,6 +3,8 @@
     white-space: nowrap;
     position: relative;
     width: 100%;
+    margin: 20px 20px;
+    border: none;
     background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 10%, rgba(255, 255, 255, 1) 90%, rgba(255, 255, 255, 0) 100%);
   }
   
@@ -27,12 +29,15 @@
     display: inline-block;
     padding: 0 20px;
     vertical-align: middle;
+    border: none;
+    border-radius: 10px;
+
   }
   
   .marquee-image {
     display: inline-block;
     vertical-align: middle;
-    margin-right: 10px;
+    
   }
   
   .marquee-name {
@@ -42,6 +47,19 @@
   
   @keyframes marquee {
     0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); } /* Adjust based on the width of marquee-content */
+    100% { transform: translateX(-50%); } 
+  }
+
+  @media screen and (max-width: 768px) {
+    .marquee-item {
+      padding: 0 10px;
+    }
+
+    .marquee{
+      display: flex;
+      width: 200%; 
+      animation: marquee 20s linear infinite;
+    }
+    
   }
   
