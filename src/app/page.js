@@ -195,7 +195,7 @@ export default function Home() {
 <BlurFade delay={0.25} inView>
     <div className="testimonials">
         <div className="testimonials-container">
-            <h2>Our Customers</h2>
+            <h2 style={{color:"#2563eb"}}>Our Customers</h2>
             <MarqueeCard/>
             
         </div>
@@ -205,8 +205,12 @@ export default function Home() {
 <BlurFade delay={0.25} inView>
     <div className="testimonials">
         <div className="testimonials-container">
+          <div className="clients-part">
             <h2>Our Working Areas</h2>
             <SlideCard works={WorkingAreas} />
+        
+          </div>
+            
             
         </div>
     </div>

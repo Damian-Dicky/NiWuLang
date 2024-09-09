@@ -29,6 +29,7 @@
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: none;
     border-radius: 10px;
+    background-color: white;
   }
   
   .work-card:last-child {
@@ -50,7 +51,8 @@
   .work-type-text {
     margin-top: 0.5rem;
     font-weight: 600;
-    color: #4b5563;
+    color: #2563eb;
+    text-align: center;
   }
   
   .work-carousel-nav-button {
