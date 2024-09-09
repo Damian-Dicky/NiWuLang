@@ -1,9 +1,9 @@
 import React from "react";
 import '../CSS/Components/Button.css';
 
-export default function Button({ text, onClick }) {
+export default function Button({ text, onClick, inverse=false }) {
     return (
-        <button class="button" onClick={onClick}>
+        <button className={inverse ? "inverse-button" : "button"} onClick={onClick}>
         {text}
         </button>
     );

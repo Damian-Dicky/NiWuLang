@@ -20,6 +20,9 @@ import WorkingAreas from "./static/WorkingAreas";
 import SlideCard from "./Components/SlideCard";
 import Navbar from "./Components/Navbar";
 import Button from "./Components/Button";
+import railway from "./assets/railway.png";
+import lake from "./assets/lake-beautification.png";
+import road from "./assets/road-construction.jpg";
 
 const Maps = dynamic(() => import('./map'), {
   ssr: false
@@ -112,9 +115,11 @@ export default function Home() {
                 <br></br>
                 Contact us today to discuss your upcoming project, and let's build a future together!</p>
             <div className="info-btn">
-            <Button text={"Start Now!"}></Button>
-
+            <Button text={"Start Now!"} inverse={true}></Button>
+            
             </div>
+            <br></br>
+            
             </div>
     </div>
 </BlurFade>
@@ -157,16 +162,30 @@ export default function Home() {
             <h2>Featured Projects</h2>
             <div className="project-cards">
                 <div className="project-card">
+                    <div className="project-image">
+                      <Image src={lake} alt="Project 1" />
+                    </div>
                     <h3>Lake Beautification</h3>
                     <p>Development and beautification of Lendale Lake</p>
+                    <Button text={"View More"}></Button>
+
                 </div>
                 <div className="project-card">
+                    <div className="project-image">
+                      <Image src={road} alt="Project 1" />
+                    </div>
                     <h3>Road Construction</h3>
                     <p>Construction of concrete roads in Panvel Municipal Corporation</p>
+                    <Button text={"View More"}></Button>
+
                 </div>
                 <div className="project-card">
+                    <div className="project-image">
+                      <Image src={railway} alt="Project 1" />
+                    </div>
                     <h3>Railway Station Maintenance</h3>
                     <p>Cleaning and sanitation services for multiple railway stations</p>
+                    <Button text={"View More"}></Button>
                 </div>
             </div>
         </div>

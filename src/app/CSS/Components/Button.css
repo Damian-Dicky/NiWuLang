@@ -9,10 +9,31 @@
     font-weight: 500;
     display: inline-block;
     margin-top: 20px;
-    transition: 1s;
+    transition: all 0.3s;
 }
 
 .button:hover{
     color: #3b82f6;
     background-color: #e0f2fe;
+    transform: translateY(-5px);
+}
+
+.inverse-button{
+    background-color:white;
+    color: #3b82f6;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: 500;
+    display: inline-block;
+    margin-top: 20px;
+    transition: all 0.3s;
+}
+
+.inverse-button:hover{
+    color: #e0f2fe;
+    transform: translateY(-5px);
+    
 }
