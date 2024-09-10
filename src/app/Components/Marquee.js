@@ -14,7 +14,7 @@ export default function MarqueeCard(props) {
         {Clients.map((item, index) => (
           <div className="marquee-item" key={index}>
           
-            <Image src={item.image} alt={item.name} className="marquee-image" width={150} height={120}/>
+            <Image src={item.image} alt={item.name} className="marquee-image" width={180} height={150}/>
             {/* <span className="marquee-name">{item.name}</span> */}
             
           </div>
@@ -22,7 +22,7 @@ export default function MarqueeCard(props) {
         {Clients.map((item, index) => (
             <div className="marquee-item" key={index + Clients.length}>
             
-              <Image src={item.image} alt={item.name} className="marquee-image" width={150} height={120}/>
+              <Image src={item.image} alt={item.name} className="marquee-image" width={180} height={150}/>
               <span className="marquee-name">{item.name}</span>
               
             </div>

@@ -1,12 +1,12 @@
 import reliance from '../assets/reliance.png';
 import tata from '../assets/tata.png';
 import cidco from '../assets/cidco.png';
-//import cwc from '../assets/cwc.jfif';
+import cwc from '../assets/cwc.jpg';
 import nmmc from '../assets/nmmc.jpg';
 import pmc from '../assets/pmc.png';
-//import pwd from '../assets/pwd.jfif';
-//import irrigation from '../assets/irrigation.jfif';
-//import jm from '../assets/jm.jfif';
+import pwd from '../assets/pwd.png';
+import irrigation from '../assets/irrigation.png';
+import jm from '../assets/jm.jpg';
 import jnpt from '../assets/jnpt.png';
 import jsw from '../assets/jsw.png';
 import mazagon from '../assets/mazagon.png';
@@ -28,7 +28,7 @@ export default [
         },
         {
           name: "CWC",
-          image: cidco,
+          image: cwc,
         },
         {
           name: "NMMC",
@@ -38,17 +38,14 @@ export default [
           name: "PMC",
           image: pmc,
         },
-        {
-          name: "PWD",
-          image: pmc,
-        },
+      
         {
           name: "Irrigation Department",
-          image: pmc,
+          image: irrigation,
         },
         {
           name: "JMMIPL",
-          image: pmc,
+          image: jm,
         },
         {
           name: "JNPT",
@@ -69,5 +66,9 @@ export default [
         {
           name:"ONGC",
           image:ongc,
-        }
+        },
+        {
+          name: "PWD",
+          image: pwd,
+        },
 ]
