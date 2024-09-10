@@ -23,6 +23,17 @@ import Button from "./Components/Button";
 import railway from "./assets/railway.png";
 import lake from "./assets/lake-beautification.png";
 import road from "./assets/road-construction.jpg";
+import fifteen from "./assets/15+.png";
+import gogreen from "./assets/go_green.png";
+import {
+  Sheet,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet"
+
 
 const Maps = dynamic(() => import('./map'), {
   ssr: false
@@ -105,10 +116,16 @@ export default function Home() {
         </div>
       </div>
 
+    
+
 
 <BlurFade delay={0.25} inView>
 <div className="info">
         <div className="info-container">
+          {/* <div className="info-head">
+          <Image src={fifteen} alt="15+" width={100} height={100}/>
+          <Image src={gogreen} alt="Go Green" width={100} height={100}/>
+          </div> */}
             
             <p>Over 15 years of experience, we specialize in providing high-quality construction solutions for residential, commercial, and industrial projects. Our team of skilled professionals is committed to delivering excellence, safety, and innovation in every project we undertake. LTPS INFRA PVT. LTD. We believe in building not only structures but also long-lasting relationships with our clients. Trust us to turn your dreams into reality and make your construction journey seamless and rewarding. 
                 <br></br>
@@ -123,6 +140,7 @@ export default function Home() {
             </div>
     </div>
 </BlurFade>
+    
     
 
 <BlurFade delay={0.25} inView>

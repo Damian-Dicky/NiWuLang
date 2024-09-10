@@ -139,10 +139,18 @@ body {
 }
 
 .info-container {
-    
+    justify-content: center;
+    align-items: center;
     margin: 0 auto;
     text-align:start;
     
+}
+
+.info-head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
 }
 
 .info-btn{
@@ -322,7 +330,7 @@ body {
     align-items: center;
     background-color: #2563eb;
     color: white;
-    margin-bottom: 15px;
+    
     padding: 20px;
 }
 

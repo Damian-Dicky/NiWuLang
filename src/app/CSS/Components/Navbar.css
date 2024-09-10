@@ -23,7 +23,17 @@
     display: flex;
     font-size: 24px;
     font-weight: bold;
+    z-index: 20;
 }
+
+.nav-content .nav-sheet{
+    display: none;
+}
+
+.nav-content .nav-sheet img{
+    
+}
+
 
 .nav-links {
     display: flex;
@@ -41,4 +51,30 @@
 
 .nav-links a:hover {
     background-color: #2563eb;
+}
+
+@media screen and (max-width: 640px) {
+    .nav-content {
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .nav-links a {
+        padding: 8px 0;
+        width: 100%;
+        text-align: center;
+        display: none;
+    }
+
+    .nav-content span{
+        display: none;
+    }
+
+    .nav-content .nav-sheet{
+        display: block;
+    }
+    
 }

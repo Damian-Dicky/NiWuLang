@@ -1,6 +1,17 @@
 import Image from "next/image";
 import company_logo from "../assets/company_logo.png";
 import '../CSS/Components/Navbar.css';
+import list from "../assets/menu.png";
+import {
+    Sheet,
+    SheetContent,
+    SheetDescription,
+    SheetHeader,
+    SheetTitle,
+    SheetTrigger,
+  } from "@/components/ui/sheet"
+import MobileMenu from "./Menu";
+  
 
 export default function Navbar() {
     return(
@@ -17,9 +28,17 @@ export default function Navbar() {
                     <a href="Projects">Projects</a>
                     <a href="About">About Us</a>
                     <a href="Contact">Contact</a>
+                    
+                </div>
+                <div className="nav-sheet">
+                <MobileMenu/>
+
+
                 </div>
             </div>
         </div>
+       
+
     </nav>
     );
 }
