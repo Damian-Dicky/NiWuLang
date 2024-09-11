@@ -1,15 +1,8 @@
 import Image from "next/image";
 import company_logo from "../assets/company_logo.png";
 import '../CSS/Components/Navbar.css';
-import list from "../assets/menu.png";
-import {
-    Sheet,
-    SheetContent,
-    SheetDescription,
-    SheetHeader,
-    SheetTitle,
-    SheetTrigger,
-  } from "@/components/ui/sheet"
+import Link from 'next/link'
+
 import MobileMenu from "./Menu";
   
 
@@ -23,11 +16,11 @@ export default function Navbar() {
                     <span>LTPS INFRA PVT. LTD.</span>
                 </div>
                 <div className="nav-links">
-                    <a href="#">Home</a>
-                    <a href="Services">Services</a>
-                    <a href="Projects">Projects</a>
-                    <a href="About">About Us</a>
-                    <a href="Contact">Contact</a>
+                    <Link href="/">Home</Link>
+                    <Link href="Services">Services</Link>
+                    <Link href="Projects">Projects</Link>
+                    <Link href="About">About Us</Link>
+                    <Link href="Contact">Contact</Link>
                     
                 </div>
                 <div className="nav-sheet">

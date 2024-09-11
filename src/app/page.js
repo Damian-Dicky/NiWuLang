@@ -25,14 +25,7 @@ import lake from "./assets/lake-beautification.png";
 import road from "./assets/road-construction.jpg";
 import fifteen from "./assets/15+.png";
 import gogreen from "./assets/go_green.png";
-import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet"
+import Link from 'next/link';
 
 
 const Maps = dynamic(() => import('./map'), {
@@ -99,7 +92,7 @@ export default function Home() {
                   text={slide.title}
                 />
                 <p>{slide.description}</p>
-                <a href={slide.page} className="hero-button">{slide.buttonText}</a>
+                <Link href={slide.page} className="hero-button">{slide.buttonText}</Link>
                 {/* Add the image with lower opacity */}
                 <Image src={slide.image} alt={slide.title} className="carousel-image" />
               </div>
@@ -132,7 +125,10 @@ export default function Home() {
                 <br></br>
                 Contact us today to discuss your upcoming project, and let's build a future together!</p>
             <div className="info-btn">
-            <Button text={"Start Now!"} inverse={true}></Button>
+              <Link href="Contact">
+              <Button text={"Start Now!"} inverse={true}></Button>
+
+              </Link>
             
             </div>
             <br></br>
