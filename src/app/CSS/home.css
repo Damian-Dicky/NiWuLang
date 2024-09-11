@@ -167,6 +167,7 @@ body {
 .info-container p{
     text-align: center;
     color: white;
+
 }
 
 .info h2 {
@@ -284,6 +285,7 @@ body {
     padding: 24px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
 }
 
 .icon {
@@ -336,7 +338,12 @@ body {
 
 .contact-info .info{
     flex: 1;
+
    
+}
+
+.sub-contact-info{
+    margin-bottom: 10px;
 }
 
 

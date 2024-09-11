@@ -122,10 +122,10 @@ export default function Home() {
 <BlurFade delay={0.25} inView>
 <div className="info">
         <div className="info-container">
-          {/* <div className="info-head">
+          <div className="info-head">
           <Image src={fifteen} alt="15+" width={100} height={100}/>
           <Image src={gogreen} alt="Go Green" width={100} height={100}/>
-          </div> */}
+          </div>
             
             <p>Over 15 years of experience, we specialize in providing high-quality construction solutions for residential, commercial, and industrial projects. Our team of skilled professionals is committed to delivering excellence, safety, and innovation in every project we undertake. LTPS INFRA PVT. LTD. We believe in building not only structures but also long-lasting relationships with our clients. Trust us to turn your dreams into reality and make your construction journey seamless and rewarding. 
                 <br></br>
@@ -246,8 +246,16 @@ export default function Home() {
                 </div>
                 <div className="feature-card">
                     <div className="icon"><AwardIcon/></div>
-                    <h3><NumberTicker value={15}></NumberTicker>+ Years Experience</h3>
-                    <p>Over a decade of expertise in infrastructure development</p>
+                    <h3>Client Satisfaction</h3>
+                    <p>Building strong relationships with our clients is essential 
+to 
+our 
+success. 
+We 
+maintain 
+open 
+communication and collaboration 
+throughout the entire construction process.</p>
                 </div>
             </div>
 

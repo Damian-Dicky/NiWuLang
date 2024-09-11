@@ -1,3 +1,5 @@
+import { lazy } from 'react';
+
 import earthfilling from '../assets/earth-filling.jpg';
 import excavation from '../assets/excavation.jpg';
 import dam from '../assets/dam.jpg';
@@ -15,6 +17,7 @@ import coal from '../assets/coal.jpg';
 import miningtransport from '../assets/minning-transport.jpg';
 import heavytransport from '../assets/heavy-transport.jpg';
 import pipeline from '../assets/pipeline.jpg';
+
 
 export default [
     {

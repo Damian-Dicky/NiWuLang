@@ -1,11 +1,12 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, Suspense } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import '../CSS/Components/slideCard.css';
 import Image from 'next/image';
 
 const WorkCard = ({ image, workType }) => (
   <div className="work-card flex flex-col items-center bg-white rounded-lg shadow-md p-4 m-2 w-64">
-    <Image src={image} alt={workType} className="work-card-image rounded-md mb-4" />
+      <Image src={image} alt={workType} className="work-card-image rounded-md mb-4" />
+    
     <h3 className="work-type-text text-lg">{workType}</h3>
   </div>
 );
