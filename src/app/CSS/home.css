@@ -56,7 +56,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    opacity: 0.5; /* Lower opacity for background effect */
+    opacity: 1; /* Lower opacity for background effect */
     z-index: -1; /* Ensure images are behind the text */
 }
 
