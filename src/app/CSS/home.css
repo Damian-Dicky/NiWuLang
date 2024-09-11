@@ -13,12 +13,14 @@ body {
 }
 
 .hero {
-    /* background-color: #3b82f6; */
+    background: linear-gradient(to bottom, #fff 0%, #3b82f6 100%);
     position: relative;
     overflow: hidden;
     width: 100%;
     height: 90vh; /* Make hero full-screen */
+    z-index: 100;
 }
+
 
 .carousel-container {
     width: 100%;
@@ -54,7 +56,7 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    opacity: 1; /* Lower opacity for background effect */
+    opacity: 0.5; /* Lower opacity for background effect */
     z-index: -1; /* Ensure images are behind the text */
 }
 
