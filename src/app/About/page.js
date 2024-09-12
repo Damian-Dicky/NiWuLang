@@ -5,6 +5,9 @@ import "../CSS/Components/Navbar.css";
 import React, { useState, useEffect } from 'react';
 import { Tool, Truck, Users, Leaf, Mail, Phone, MapPin } from 'lucide-react';
 import Navbar from "../Components/Navbar";
+import Image from "next/image";
+import Road from "../assets/road-construction.jpg";
+import { Medal } from "lucide-react";
 
 const AboutUs = () => {
   const [activeTab, setActiveTab] = useState('expertise');
@@ -35,7 +38,74 @@ const AboutUs = () => {
     <div className="parent">
        <Navbar />
        <div className="about-us-container">
-      <h1 className="page-title">About LTPS INFRA PVT. LTD.</h1>
+
+      <div className="about-profile">
+        
+        <div className="about-profile-text">
+        <h2>Company Profile</h2>
+        <p>
+          LTPS INFRA PVT. LTD. is a leading construction company in India. We specialize in earth-filling,
+          excavation works, dam and canal works, road works and highways, SEZ's development, township development,
+          and mining transportation works. Our team has over 15 years of experience in the industry, and we have
+          successfully completed over 500 projects.
+
+<br /><br />
+          We are committed to delivering quality projects on time and within budget. We prioritize the safety of our
+          employees, subcontractors, and the public. We are also committed to sustainable practices and materials.
+
+          
+        </p>
+        </div>
+
+        <div className="about-profile-image">
+          <Image src={Road} alt="Truck" />
+        </div>
+      </div>
+
+      <div className="about-management">
+        <div className="management-lead">
+          <h2>Meet Our Management Team</h2>
+          <div className="management-grid">
+            <div className="management-card">
+              <div className="management-icon">
+              <Image src={Road} alt="Road" />
+              </div>
+              <div className="management-text">
+              <h3>John Doe</h3>
+              <p>CEO</p>
+              </div>
+            </div>
+            <div className="management-card">
+             <div className="management-icon">
+              <Image src={Road} alt="Road" />
+              </div>
+              <div className="management-text">
+              <h3>Jane Doe</h3>
+              <p>COO</p>
+              </div>
+            </div>
+            <div className="management-card">
+             <div className="management-icon">
+              <Image src={Road} alt="Road" />
+              </div>
+              <div className="management-text">
+              <h3>John Smith</h3>
+              <p>CFO</p>
+              </div>
+            </div>
+            </div>
+          </div>
+      </div>
+
+      <div className="about-vision">
+        <Medal size={48} color="
+        #f1c40f
+        "/>
+        <h2>Our Vision</h2>
+        <p>
+          Our vision is to be the leading construction company in India, known for delivering quality projects on time and within budget.
+        </p>
+      </div>
       
       <div className="info-grid">
         <div className="info-card">

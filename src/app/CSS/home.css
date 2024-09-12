@@ -17,8 +17,8 @@ body {
     position: relative;
     overflow: hidden;
     width: 100%;
-    height: 90vh; /* Make hero full-screen */
-    z-index: 100;
+    height: 100vh; /* Make hero full-screen */
+    z-index: 1;
 }
 
 
@@ -61,7 +61,7 @@ body {
 }
 
 .hero-content {
-    z-index: 2; /* Ensure content is above images */
+    z-index: 0; /* Ensure content is above images */
     color: white;
     text-align: center;
 }

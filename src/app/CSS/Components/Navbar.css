@@ -1,18 +1,30 @@
 
+
+
 .nav {
+    
     background-color: #1e3a8a;
     color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    
 }
 
 .nav-container {
+    display: flex;
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 16px;
+
 }
 
 .nav-content {
     display: flex;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
     height: 64px;
@@ -75,6 +87,7 @@
 
     .nav-content .nav-sheet{
         display: block;
+        margin-right: 16px;
     }
     
 }
