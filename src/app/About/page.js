@@ -3,11 +3,16 @@
 import "../CSS/about.css";
 import "../CSS/Components/Navbar.css";
 import React, { useState, useEffect } from 'react';
-import { Tool, Truck, Users, Leaf, Mail, Phone, MapPin } from 'lucide-react';
+import { Tool, Truck, Users, Leaf, Mail, Phone, MapPin, Infinity } from 'lucide-react';
 import Navbar from "../Components/Navbar";
 import Image from "next/image";
 import Road from "../assets/road-construction.jpg";
 import { Medal } from "lucide-react";
+import BlurFade from "@/components/magicui/blur-fade";
+import { ChartNoAxesCombined } from "lucide-react";
+import NumberTicker from "@/components/magicui/number-ticker";
+import forest from "../assets/forest.jpg";
+import Footer from "../Components/Footer";
 
 const AboutUs = () => {
   const [activeTab, setActiveTab] = useState('expertise');
@@ -37,8 +42,9 @@ const AboutUs = () => {
   return (
     <div className="parent">
        <Navbar />
+       
        <div className="about-us-container">
-
+       <BlurFade delay={0.25} inView>
       <div className="about-profile">
         
         <div className="about-profile-text">
@@ -61,7 +67,9 @@ const AboutUs = () => {
           <Image src={Road} alt="Truck" />
         </div>
       </div>
+      </BlurFade>
 
+      <BlurFade delay={0.25} inView>
       <div className="about-management">
         <div className="management-lead">
           <h2>Meet Our Management Team</h2>
@@ -96,7 +104,10 @@ const AboutUs = () => {
             </div>
           </div>
       </div>
+      </BlurFade>
 
+
+      <BlurFade delay={0.25} inView>
       <div className="about-vision">
         <Medal size={48} color="
         #f1c40f
@@ -106,10 +117,17 @@ const AboutUs = () => {
           Our vision is to be the leading construction company in India, known for delivering quality projects on time and within budget.
         </p>
       </div>
-      
+      </BlurFade>
+
+
+      <BlurFade delay={0.25} inView>
       <div className="info-grid">
         <div className="info-card">
+          <div className="info-icon">
+          <ChartNoAxesCombined size={48} color="#fff" />
           <h2 className="card-title">Our Expertise</h2>
+          </div>
+          
           <ul className="expertise-list">
             <li>Earth-Filling and Earth-Cutting</li>
             <li>Excavation Works</li>
@@ -122,7 +140,10 @@ const AboutUs = () => {
         </div>
         
         <div className="info-card">
+          <div className="info-icon">
+            <Infinity size={48} color="#fff" />
           <h2 className="card-title">Our Commitment</h2>
+          </div>
           <ul className="commitment-list">
             <li>Quality projects delivered on time and within budget</li>
             <li>Prioritizing safety of employees, subcontractors, and the public</li>
@@ -131,8 +152,11 @@ const AboutUs = () => {
           </ul>
         </div>
       </div>
+      </BlurFade>
       
       <div className="go-green-section">
+        <Leaf size={48} color="#FFD700" />
+        <h1><NumberTicker value={500}></NumberTicker>+ Projects Completed</h1>
         <h2 className="card-title">Our Go-Green Policy</h2>
         <p>
           We are committed to protecting our environment. As part of our go-green initiative, 
@@ -142,6 +166,7 @@ const AboutUs = () => {
       
      
     </div>
+    <Footer />
     </div>
   );
 };

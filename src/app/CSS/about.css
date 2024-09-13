@@ -49,7 +49,7 @@ body{
 }
 
 .about-management h2{
-    font-size: 2rem;
+    font-size: 1.75rem;
     font-weight: 700;
     color: white;
     margin-bottom: 1rem;
@@ -61,7 +61,7 @@ body{
 
 .management-grid{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit,minmax(200px, 1fr));
     gap: 2rem;
     padding: 2rem 0;
 }
@@ -115,10 +115,74 @@ body{
     color: #1e3a8a;
 }
 
+.info-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 0px;
+    padding: 2rem 0rem;
+}
+
+.info-grid .info-card{
+    flex: 1;
+    padding: 2rem;
+    background-color: #1e3a8a;
+    color: white;
+    margin: 1rem;
+    border-radius: 8px;
+    border: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.info-card:hover{
+    transform: translateY(-5px);
+    background-color: #3b82f6;
+}
+
+.info-icon{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.go-green-section {
+    position: relative;
+    text-align: center;
+    color: white;
+    padding: 2rem 1rem;
+    background-image: url('../assets/forest.jpg');
+  background-size: cover;
+  background-position: center;
+
+  text-align: center;
+  }
+
+  .background-image{
+    width: 100%;
+    
+  }
+  
+  .background-image img{
+    position: absolute;
+    width: 100%;
+  
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+    z-index: -1; /* Ensures the background is behind the content */
+  }
+  
+  .go-green-section h1, .go-green-section h2, .go-green-section p, .go-green-section Leaf {
+    position: relative; /* This ensures the text and Leaf icon are on top of the background image */
+    z-index: 1;
+  }
+ 
+
 @media screen and (max-width: 768px){
-    .management-grid{
-        grid-template-columns: repeat(1, 1fr);
-    }
+    
 
     .about-profile{
         flex-direction: column;

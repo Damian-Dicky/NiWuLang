@@ -26,6 +26,7 @@ import road from "./assets/road-construction.jpg";
 import fifteen from "./assets/15+.png";
 import gogreen from "./assets/go_green.png";
 import Link from 'next/link';
+import Footer from "./Components/Footer";
 
 
 const Maps = dynamic(() => import('./map'), {
@@ -308,11 +309,7 @@ throughout the entire construction process.</p>
     </div>
 </BlurFade>
 
-    <footer className="footer">
-        <div className="footer-container">
-            <p>&copy; 2024 LTPS INFRA PVT. LTD. All rights reserved.</p>
-        </div>
-    </footer>
+  <Footer/>
 </div>
   );
 }
