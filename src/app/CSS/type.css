@@ -1,0 +1,49 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    padding: 4rem 1rem;
+    text-align: center;
+}
+
+.service-card{
+    padding: 7rem 1rem;
+    
+    display: flex;
+    gap: 1.5rem;
+}
+
+.service-card .service-body{
+    flex: 1;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 0.5rem;
+    border: none;
+}
+
+.service-header{
+    flex: 1.5;
+}
+
+.service-body img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+
+}
+
+@media screen and (max-width: 768px){
+    .service-card{
+        flex-direction: column;
+    }
+
+    .service-card .service-image{
+        height: 200px;
+    }
+    
+}

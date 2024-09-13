@@ -1,66 +1,49 @@
 "use client";
 
+import Button from "../Components/Button";
 import Navbar from "../Components/Navbar";
 import "../CSS/Components/Navbar.css";
 import "../CSS/services.css";
+import "../CSS/Components/Button.css";
+import { Building2, Truck, Leaf } from "lucide-react";
+import Footer from "../Components/Footer";
+import "../CSS/Components/Footer.css";
+import { Link } from "next/link";
+import services from "../static/Services";
 
 export default function Services() {
+
   return (
     <div>
       <Navbar />
 
-      <div className="services-container">
+      <div className="container">
+  <h1>Our Services</h1>
+  
+  <div className="services-grid">
+    {services.map((service, index) => (
+      <div key={index} className="service-card">
+        <div className="service-header">
+          <span className="service-icon">{service.icon}</span>
+          <h3>{service.name}</h3>
+        </div>
+        <div className="service-body">
+          
+        <Button text={"Learn More"} onClick={
+          () => {
+            window.location.href = service.link;
+        } }>
 
-        <h1 className="page-title">Our Services</h1>
+        </Button>
+        
+        </div>
+      </div>
+    ))}
+  </div>
 
-        <div className="services-grid">
+</div>
 
-          <div className="service-card">
-
-            <h2 className="card-title">Earth-Filling and Earth-Cutting</h2>
-            <p className="card-description">We have experience with 10 million+ cubic meter earth filling.</p>
-          </div>
-
-          <div className="service-card">
-              
-              <h2 className="card-title">Excavation Works</h2>
-              <p className="card-description">We specialize in excavation works for various projects.</p>
-              </div>
-
-          <div className="service-card">
-                
-                <h2 className="card-title">Dam and Canal Works</h2>
-                <p className="card-description">We have experience with dam and canal works.</p>
-                </div>
-
-          <div className="service-card">
-                    
-                    <h2 className="card-title">Road Works and Highways</h2>
-                    <p className="card-description">We specialize in road works and highways.</p>
-                    </div>
-              
-          <div className="service-card">
-
-            <h2 className="card-title">SEZ's Development</h2>
-            <p className="card-description">We have experience with SEZ's development.</p>
-            </div>
-
-          <div className="service-card">
-                
-                <h2 className="card-title">Township Development</h2>
-                <p className="card-description">We specialize in township development.</p>
-                </div>  
-
-                <div className="service-card">
-                      
-                      <h2 className="card-title">Mining Transportation Works</h2>
-                      <p className="card-description">We have experience with mining transportation works.</p>
-                      </div>  
-
-
-                </div>
-                </div>
-
+<Footer />
                
     </div>
   );
