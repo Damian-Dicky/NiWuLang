@@ -26,21 +26,19 @@ export default function Services() {
   
   <div className="services-grid">
     {visibleServices.map((service, index) => (
-      <div key={index} className="service-card">
+      <div key={index} className="service-card" onClick={()=>{
+        window.location.href = service.link;
+      }}>
         <div className="service-header">
           <span className="service-icon">{service.icon}</span>
           <h3>{service.name}</h3>
-        </div>
-        <div className="service-body">
+          <div className="service-body">
           
-        <Button text={"Learn More"} onClick={
-          () => {
-            window.location.href = service.link;
-        } }>
-
-        </Button>
-        
+       
+          
+          </div>
         </div>
+       
       </div>
     ))}
 

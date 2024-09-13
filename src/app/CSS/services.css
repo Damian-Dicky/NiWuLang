@@ -59,7 +59,7 @@
     display: block;
     background-color: var(--card-background);
     border-radius: 0.5rem;
-    padding: 1.5rem;
+    padding: 2.5rem 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease, transform 0.3s ease;
     border-top: 4px solid var(--primary-color);
@@ -68,19 +68,19 @@
   .service-card:hover {
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
     transform: translateY(-5px);
-    background-color: #1e40af;
-    color: white;
+    
   }
   
   .service-header {
     display: block;
     align-items: center;
+    text-align: center;
     margin-bottom: 1rem;
   }
 
   .service-header .service-body{
     display: flex;
-    justify-content: end;
+    justify-content: center;
     width: 100%;
   }
   

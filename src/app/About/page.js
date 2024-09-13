@@ -156,7 +156,7 @@ const AboutUs = () => {
       
       <div className="go-green-section">
         <Leaf size={48} color="#FFD700" />
-        <h1><NumberTicker value={500}></NumberTicker>+ Projects Completed</h1>
+        <h1><NumberTicker value={5000}></NumberTicker>+ Tress Planted</h1>
         <h2 className="card-title">Our Go-Green Policy</h2>
         <p>
           We are committed to protecting our environment. As part of our go-green initiative, 
