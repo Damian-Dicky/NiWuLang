@@ -109,6 +109,13 @@
     text-align: center;
     color: #065f46;
   }
+
+  .show-all-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+  }
   
   @media (max-width: 768px) {
     .services-grid {

@@ -3,16 +3,28 @@ body{
     padding: 0;
 }
 
-h1{
+h2{
     font-size: 2.5rem;
     margin-bottom: 2rem;
+    color: #2563eb;
+}
+
+.service-parent{
     padding: 4rem 1rem;
-    text-align: center;
+}
+
+.service-head{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.service-head span {
+    
+    color: #2563eb;
 }
 
 .service-card{
-    padding: 7rem 1rem;
-    
     display: flex;
     gap: 1.5rem;
 }
