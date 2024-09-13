@@ -185,7 +185,7 @@ body {
 
 .services, .projects, .about-us, .contact {
     background-color: white;
-    padding: 2rem 1rem;
+    padding: 2rem 16px;
 }
 
 
@@ -194,11 +194,19 @@ body {
     background-color: #1e3a8a;
 }
 
+.contact{
+    padding:0;
+}
 
 .services-container, .projects-container, .about-us-container, .contact-container {
     max-width: 1200px;
     margin: 0 auto;
     text-align: center;
+    padding: 1rem 0;
+}
+
+.contact-container{
+    padding: 1rem 1rem;
 }
 
 
