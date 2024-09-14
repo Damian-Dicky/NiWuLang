@@ -45,10 +45,17 @@ const AboutUs = () => {
        
        <div className="about-us-container">
        <BlurFade delay={0.25} inView>
+       <h2>Company Profile</h2>
       <div className="about-profile">
         
+        
+
+        <div className="about-profile-image">
+          <Image src={Road} alt="Truck" />
+        </div>
+
         <div className="about-profile-text">
-        <h2>Company Profile</h2>
+        
         <p>
           LTPS INFRA PVT. LTD. is a leading construction company in India. We specialize in earth-filling,
           excavation works, dam and canal works, road works and highways, SEZ's development, township development,
@@ -61,10 +68,6 @@ const AboutUs = () => {
 
           
         </p>
-        </div>
-
-        <div className="about-profile-image">
-          <Image src={Road} alt="Truck" />
         </div>
       </div>
       </BlurFade>
