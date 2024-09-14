@@ -15,12 +15,12 @@ body{
     font-size: 2rem;
     font-weight: 700;
     color: #1e3a8a;
-    margin-left: 1rem;
+    margin-left: 2rem;
     margin-bottom: 0;
 }
 .about-profile{
     display: flex;
-    padding: 2rem 1rem;
+    padding: 2rem 2rem;
     gap: 2rem;
 } 
 
@@ -120,7 +120,7 @@ body{
     font-size: 1rem;
     color: #1e3a8a;
 }
-
+/* 
 .info-grid{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -145,46 +145,75 @@ body{
 }
 
 .info-icon{
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+    
+    padding-left: 1rem;
+    padding-bottom: 0;
+    
 }
 
-.go-green-section {
-    position: relative;
-    text-align: center;
+.info-card h2{
+    padding: 0;
+}
+
+
+
+.info-card .card-titles {
     color: white;
-    padding: 2rem 1rem;
-    background-image: url('../assets/forest.jpg');
-  background-size: cover;
-  background-position: center;
 
-  text-align: center;
+} */
+.go-green-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 0;
+    background-color: #f3f4f6;
+  }
+  
+  .go-green-container {
+    text-align: center;
+  }
+  
+  .go-green-card {
+    border:none; /* Green border */
+    border-radius: 8px;
+    padding: 20px;
+    border-radius: 15px; /* Rounded corners */
+    background-color: white; /* White background */
+    display: inline-block;
+    text-align: center;
+    color: gold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .go-green-card h1 {
+    margin-top: 10px;
+    font-size: 24px;
+    color: #3b82f6;
+  }
+  
+  .go-green-card p {
+    margin-top: 20px;
+    color: #3b82f6;
   }
 
-  .background-image{
-    width: 100%;
-    
+  .go-green-container h2{
+    font-size: 2rem;
+    font-weight: 700;
+    color: #1e3a8a;
+    margin-bottom: 1rem;
+  }
+
+  .go-green-container p{
+   
+    color: #1e3a8a;
+    margin-bottom: 1rem;
   }
   
-  .background-image img{
-    position: absolute;
-    width: 100%;
-  
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-size: cover;
-    background-position: center;
-    object-fit: cover;
-    z-index: -1; /* Ensures the background is behind the content */
-  }
-  
-  .go-green-section h1, .go-green-section h2, .go-green-section p, .go-green-section Leaf {
-    position: relative; /* This ensures the text and Leaf icon are on top of the background image */
-    z-index: 1;
-  }
+    .go-green-card:hover{
+        transform: translate(0, -5px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
  
 
 @media screen and (max-width: 768px){

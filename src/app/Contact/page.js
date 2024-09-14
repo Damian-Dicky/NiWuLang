@@ -24,27 +24,28 @@ export default function Contact(){
                     <div className="contact-card">
                         <MapIcon size={48} />
                         <h3 className="card-title">Address</h3>
-                        <p className="card-description">Address: 1234 Main St, New Delhi, India</p>
-                        <p className="card-description">Phone: +91 123-456-7890</p>
-                        <p className="card-description">Email:</p>
+                        <p className="card-description">
+                        113, A-Wing, Sai Arcade, Opp. Panvel ST Stand, Panvel, Dist. Raigad, Maharashtra, India - 410206
+                        </p>
+                        
                     
                     </div>
                     <div className="contact-card">
                         <FileQuestionIcon size={48} />
                         <h3 className="card-title">General Inquiries</h3>
-                        <p className="card-description">For general inquiries, please email us at
+                        <p className="card-description">For general inquiries, please email us at <b>ltpsinfra@gmail.com</b>
                         </p>
                     </div>
                     <div className="contact-card">
                         <PhoneCallIcon size={48} />
                         <h3 className="card-title">Sales</h3>
-                        <p className="card-description">For sales inquiries, please email us at
+                        <p className="card-description">For sales inquiries, please email us at <b>ltpsinfra@gmail.com</b>
                         </p>
                     </div>
                     <div className="contact-card">
                         <HelpCircleIcon size={48} />
                         <h3 className="card-title">Support</h3>
-                        <p className="card-description">For support inquiries, please email us at
+                        <p className="card-description">For support inquiries, please call us at <b>9323823009 / 9537577777</b>
                         </p>
                     </div>
                 </div>

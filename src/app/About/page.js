@@ -13,6 +13,7 @@ import { ChartNoAxesCombined } from "lucide-react";
 import NumberTicker from "@/components/magicui/number-ticker";
 import forest from "../assets/forest.jpg";
 import Footer from "../Components/Footer";
+import InfoGrid from "../Components/InfoCard";
 
 const AboutUs = () => {
   const [activeTab, setActiveTab] = useState('expertise');
@@ -124,47 +125,21 @@ const AboutUs = () => {
 
 
       <BlurFade delay={0.25} inView>
-      <div className="info-grid">
-        <div className="info-card">
-          <div className="info-icon">
-          <ChartNoAxesCombined size={48} color="#fff" />
-          <h2 className="card-title">Our Expertise</h2>
-          </div>
-          
-          <ul className="expertise-list">
-            <li>Earth-Filling and Earth-Cutting</li>
-            <li>Excavation Works</li>
-            <li>Dam and Canal Works</li>
-            <li>Road Works and Highways</li>
-            <li>SEZ's Development</li>
-            <li>Township Development</li>
-            <li>Mining Transportation Works</li>
-          </ul>
-        </div>
-        
-        <div className="info-card">
-          <div className="info-icon">
-            <Infinity size={48} color="#fff" />
-          <h2 className="card-title">Our Commitment</h2>
-          </div>
-          <ul className="commitment-list">
-            <li>Quality projects delivered on time and within budget</li>
-            <li>Prioritizing safety of employees, subcontractors, and the public</li>
-            <li>Commitment to sustainable practices and materials</li>
-            <li>15+ years experience with 10 million+ cubic meter earth filling</li>
-          </ul>
-        </div>
-      </div>
+      <InfoGrid />
       </BlurFade>
       
       <div className="go-green-section">
-        <Leaf size={48} color="#FFD700" />
-        <h1><NumberTicker value={5000}></NumberTicker>+ Tress Planted</h1>
+        <div className="go-green-container">
+          {/* <div className="go-green-card"> */}
+          <Leaf size={48} color="#FFD700" />
+          {/* </div> */}
+        
         <h2 className="card-title">Our Go-Green Policy</h2>
         <p>
           We are committed to protecting our environment. As part of our go-green initiative, 
           we plant 100 trees for every completed project.
         </p>
+        </div>
       </div>
       
      

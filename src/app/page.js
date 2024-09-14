@@ -2,19 +2,11 @@
 
 import Image from "next/image";
 import dynamic from 'next/dynamic';
-import styles from "./page.module.css";
-import company_logo from "./assets/company_logo.png";
 import './CSS/home.css'
-import img1 from './assets/1.png';
-import img2 from './assets/2.png';
-import img3 from './assets/3.png';
 import React, { useState, useEffect } from "react";
-import Clients from "./static/Clients";
-import { HardHat, Truck, Building, CheckCircle, Award, MapPin, Phone, Mail, AwardIcon, MapIcon, PhoneIcon, MailIcon, ShieldCheck, KeyRound, Leaf } from 'lucide-react';
+import { HardHat, Truck, Building, CheckCircle, AwardIcon, MapIcon, PhoneIcon, MailIcon, KeyRound, Leaf } from 'lucide-react';
 import BlurFade from "@/components/magicui/blur-fade";
 import TypingAnimation from "@/components/magicui/typing-animation";
-import NumberTicker from "@/components/magicui/number-ticker";
-import Marquee from "@/components/magicui/marquee";
 import MarqueeCard from "./Components/Marquee";
 import WorkingAreas from "./static/WorkingAreas";
 import SlideCard from "./Components/SlideCard";
@@ -27,7 +19,9 @@ import fifteen from "./assets/15+.png";
 import gogreen from "./assets/go_green.png";
 import Link from 'next/link';
 import Footer from "./Components/Footer";
-
+import slides from "./static/Slides";
+import LazyLoadImage from "./Components/LazyLoad";
+import blurImage from "./assets/blur.jpg";
 
 const Maps = dynamic(() => import('./map'), {
   ssr: false
@@ -36,30 +30,6 @@ const Maps = dynamic(() => import('./map'), {
 export default function Home() {
   const [map, setMap] = useState(null);
   const [currentSlide, setCurrentSlide] = useState(0);
-
-  const slides = [
-    {
-      title: "Building the Future, One Project at a Time",
-      description: "LTPS INFRA PVT. LTD. - Your trusted partner in infrastructure development",
-      buttonText: "Get Started",
-      image: img1,
-      page: "Services",
-    },
-    {
-      title: "Expert Infrastructure Solutions",
-      description: "Delivering quality projects for over 15 years",
-      buttonText: "Learn More",
-      image: img2,
-      page: "Projects",
-    },
-    {
-      title: "Innovative Engineering Services",
-      description: "Committed to safety, quality, and sustainability",
-      buttonText: "Contact Us",
-      image: img3,
-      page: "Contact",
-    },
-  ];
 
   // Function to move to the next or previous slide
   const moveSlide = (direction) => {
@@ -96,6 +66,13 @@ export default function Home() {
                 <Link href={slide.page} className="hero-button">{slide.buttonText}</Link>
                 {/* Add the image with lower opacity */}
                 <Image src={slide.image} alt={slide.title} className="carousel-image" />
+                {/* <LazyLoadImage 
+                src={slide.image} 
+                alt={slide.title} 
+                className="carousel-image" 
+                placeholderSrc={blurImage}
+                
+                /> */}
               </div>
             </div>
           ))}
@@ -182,7 +159,9 @@ export default function Home() {
                     </div>
                     <h3>Lake Beautification</h3>
                     <p>Development and beautification of Lendale Lake</p>
-                    <Button text={"View More"}></Button>
+                    <Button text={"View More"} onClick={()=>{
+                      window.location.href = "/Services/sea-port-works";
+                    }}></Button>
 
                 </div>
                 <div className="project-card">
@@ -191,7 +170,9 @@ export default function Home() {
                     </div>
                     <h3>Road Construction</h3>
                     <p>Construction of concrete roads in Panvel Municipal Corporation</p>
-                    <Button text={"View More"}></Button>
+                    <Button text={"View More"} onClick={()=>{
+                      window.location.href = "/Services/road-and-highway-construction";
+                    }}></Button>
 
                 </div>
                 <div className="project-card">
@@ -200,7 +181,9 @@ export default function Home() {
                     </div>
                     <h3>Railway Station Maintenance</h3>
                     <p>Cleaning and sanitation services for multiple railway stations</p>
-                    <Button text={"View More"}></Button>
+                    <Button text={"View More"} onClick={()=>{
+                      window.location.href = "/Services/general-civil-works";
+                    }}></Button>
                 </div>
             </div>
         </div>
