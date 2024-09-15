@@ -115,7 +115,7 @@ const AboutUs = () => {
       <div className="about-vision">
         <Medal size={48} color="
         #f1c40f
-        "/>
+        " className="medal"/>
         <h2>Our Vision</h2>
         <p>
           Our vision is to be the leading construction company in India, known for delivering quality projects on time and within budget.
