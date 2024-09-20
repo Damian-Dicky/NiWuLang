@@ -1,93 +1,112 @@
-
-
-
 .nav {
-    
-    background-color: #1e3a8a;
-    color: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 999999;
-    
+  background-color: #1e3a8a;
+  color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 999999;
 }
 
 .nav-container {
-    display: flex;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 16px;
-
+  display: flex;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
 }
 
 .nav-content {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    height: 64px;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
 }
-
 
 .logo {
-    display: flex;
-    font-size: 24px;
-    font-weight: bold;
-    z-index: 20;
+  display: flex;
+  gap: 0.5rem;
+  font-size: 24px;
+  font-weight: bold;
+  z-index: 20;
+  text-decoration: none;
+  color: white;
 }
 
-.nav-content .nav-sheet{
-    display: none;
+.nav-content .nav-sheet {
+  display: none;
 }
 
-.nav-content .nav-sheet img{
-    
+.nav-content .nav-sheet img {
 }
-
 
 .nav-links {
-    display: flex;
-    gap: 16px;
+  display: flex;
+  gap: 16px;
 }
 
 .nav-links a {
+    position: relative;
     padding: 8px 12px;
-    border-radius: 4px;
     text-decoration: none;
     color: white;
     font-size: 14px;
     font-weight: 500;
+    border-radius: 4px;
+    transition: color 0.3s ease, background-color 0.3s ease;
 }
 
-.nav-links a:hover {
-    background-color: #2563eb;
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: white;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+.nav-links a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Active link will stay underlined */
+.nav-links a.active::after {
+    transform: scaleX(1); /* Always show underline for active link */
+    transform-origin: bottom left;
+}
+
+.nav-links a.active {
+    color: #f3f4f6; /* Optional: change color for active link */
 }
 
 @media screen and (max-width: 640px) {
-    .nav-content {
-        justify-content: space-between;
-    }
+  .nav-content {
+    justify-content: space-between;
+  }
 
-    .nav-links {
-        display: none;
-    }
+  .nav-links {
+    display: none;
+  }
 
-    .nav-links a {
-        padding: 8px 0;
-        width: 100%;
-        text-align: center;
-        display: none;
-    }
+  .nav-links a {
+    padding: 8px 0;
+    width: 100%;
+    text-align: center;
+    display: none;
+  }
 
-    .nav-content span{
-        display: none;
-    }
+  .nav-content span {
+    display: none;
+  }
 
-    .nav-content .nav-sheet{
-        display: block;
-        margin-right: 1.5rem;
-    }
-    
+  .nav-content .nav-sheet {
+    display: block;
+    margin-right: 1.5rem;
+  }
 }

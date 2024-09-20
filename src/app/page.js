@@ -104,7 +104,7 @@ export default function Home() {
                 Contact us today to discuss your upcoming project, and let's build a future together!</p>
             <div className="info-btn">
               <Link href="Contact">
-              <Button text={"Start Now!"} inverse={true}></Button>
+              <Button text={"Start Now!"} ></Button>
 
               </Link>
             
