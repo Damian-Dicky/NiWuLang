@@ -59,6 +59,8 @@ body{
     font-weight: 700;
     color: white;
     margin-bottom: 1rem;
+    padding: 0rem 1rem;
+    text-align: center;
 }
 
 .management-text{
@@ -66,13 +68,14 @@ body{
 }
 
 .management-grid{
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(200px, 1fr));
+    display: flex;
     gap: 2rem;
     padding: 2rem 2rem;
+    justify-content: center;
 }
 
 .management-grid .management-card{
+    max-width: 400px;
     background-color: #f3f4f6;
     padding: 1rem;
     border-radius: 8px;
@@ -85,6 +88,7 @@ body{
     overflow: hidden;
     border-radius: 8px;
     border: none;
+    height: 300px;
 }
 
 .management-grid .management-card .management-icon img{
@@ -227,6 +231,12 @@ body{
 
     .about-profile{
         flex-direction: column;
+    }
+
+    .management-grid{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
     
 }

@@ -14,6 +14,7 @@ import NumberTicker from "@/components/magicui/number-ticker";
 import forest from "../assets/forest.jpg";
 import Footer from "../Components/Footer";
 import InfoGrid from "../Components/InfoCard";
+import CEO from "../assets/mock_ceo.jpg";
 
 const AboutUs = () => {
   const [activeTab, setActiveTab] = useState('expertise');
@@ -80,31 +81,23 @@ const AboutUs = () => {
           <div className="management-grid">
             <div className="management-card">
               <div className="management-icon">
-              <Image src={Road} alt="Road" />
+              <Image src={CEO} alt="Road" />
               </div>
               <div className="management-text">
-              <h3>John Doe</h3>
-              <p>CEO</p>
+              <h3>Lahu Patil</h3>
+              <p>Managing Director</p>
               </div>
             </div>
             <div className="management-card">
              <div className="management-icon">
-              <Image src={Road} alt="Road" />
+              <Image src={CEO} alt="Road" />
               </div>
               <div className="management-text">
-              <h3>Jane Doe</h3>
-              <p>COO</p>
+              <h3>Prashant Patil</h3>
+              <p>Managing Director</p>
               </div>
             </div>
-            <div className="management-card">
-             <div className="management-icon">
-              <Image src={Road} alt="Road" />
-              </div>
-              <div className="management-text">
-              <h3>John Smith</h3>
-              <p>CFO</p>
-              </div>
-            </div>
+            
             </div>
           </div>
       </div>

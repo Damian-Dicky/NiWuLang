@@ -14,27 +14,27 @@ export default function Navbar() {
       <div className="nav-container">
         <div className="nav-content">
           {/* Wrap the logo with Link to redirect to Home */}
-          <Link href="/" className="logo">
+          <a href="/" className="logo">
             <Image src={company_logo} width={35} height={30} alt="LTPS INFRA PVT. LTD." />
             <span>LTPS INFRA</span>
-          </Link>
+          </a>
           
           <div className="nav-links">
-            <Link href="/" className={pathname === "/" ? "active" : ""}>
+            <a href="/" className={pathname === "/" ? "active" : ""}>
               Home
-            </Link>
-            <Link href="/Services" className={pathname === "/Services" ? "active" : ""}>
+            </a>
+            <a href="/Services" className={pathname === "/Services" ? "active" : ""}>
               Services
-            </Link>
-            <Link href="/Projects" className={pathname === "/Projects" ? "active" : ""}>
+            </a>
+            <a href="/Projects" className={pathname === "/Projects" ? "active" : ""}>
               Projects
-            </Link>
-            <Link href="/About" className={pathname === "/About" ? "active" : ""}>
+            </a>
+            <a href="/About" className={pathname === "/About" ? "active" : ""}>
               About Us
-            </Link>
-            <Link href="/Contact" className={pathname === "/Contact" ? "active" : ""}>
+            </a>
+            <a href="/Contact" className={pathname === "/Contact" ? "active" : ""}>
               Contact
-            </Link>
+            </a>
           </div>
           <div className="nav-sheet">
             <MobileMenu />
