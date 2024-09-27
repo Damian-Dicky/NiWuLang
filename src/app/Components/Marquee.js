@@ -5,6 +5,7 @@ import Box from "../Components/Box";
 
 
 export default function MarqueeCard(props) {
+  
     return (
         
       <div className="marquee-container">

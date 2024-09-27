@@ -63,7 +63,7 @@ const LazyLoadImage = ({ src, alt, placeholderSrc, children }) => {
           height: '100%',
           objectFit: 'cover',
           filter: isLoaded ? 'none' : 'blur(20px)',
-          transition: 'filter 0.3s ease-out'
+          transition: 'filter 1s ease-out'
         }}
       />
       <div

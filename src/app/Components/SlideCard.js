@@ -3,10 +3,50 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import '../CSS/Components/slideCard.css';
 import Image from 'next/image';
 
+
+const LazyLoadImage = ({ src, alt, className }) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const imgRef = useRef();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(imgRef.current);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (imgRef.current) {
+      observer.observe(imgRef.current);
+    }
+
+    return () => {
+      if (imgRef.current) {
+        observer.unobserve(imgRef.current);
+      }
+    };
+  }, []);
+
+  return (
+    <div ref={imgRef} className={className}>
+      {isVisible ? (
+              <Image src={src} alt={alt} className="work-card-image rounded-md mb-4" placeholder='blur' />
+
+      ) : (
+        <div className="w-full h-full bg-gray-200" />
+      )}
+    </div>
+  );
+};
+
+
 const WorkCard = ({ image, workType }) => (
   <div className="work-card flex flex-col items-center bg-white rounded-lg shadow-md p-4 m-2 w-64">
-      <Image src={image} alt={workType} className="work-card-image rounded-md mb-4" />
-    
+      {/* <Image src={image} alt={workType} className="work-card-image rounded-md mb-4" placeholder='blur' /> */}
+      <LazyLoadImage src={image} alt={workType} className="work-card-image rounded-md mb-4" />    
     <h3 className="work-type-text text-lg">{workType}</h3>
   </div>
 );

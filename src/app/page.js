@@ -3,7 +3,7 @@
 import Image from "next/image";
 import dynamic from 'next/dynamic';
 import './CSS/home.css'
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect,useRef } from "react";
 import { HardHat, Truck, Building, CheckCircle, AwardIcon, MapIcon, PhoneIcon, MailIcon, KeyRound, Leaf } from 'lucide-react';
 import BlurFade from "@/components/magicui/blur-fade";
 import TypingAnimation from "@/components/magicui/typing-animation";
@@ -20,8 +20,7 @@ import gogreen from "./assets/go_green.png";
 import Link from 'next/link';
 import Footer from "./Components/Footer";
 import slides from "./static/Slides";
-import LazyLoadImage from "./Components/LazyLoad";
-import blurImage from "./assets/blur.jpg";
+
 
 const Maps = dynamic(() => import('./map'), {
   ssr: false
@@ -45,6 +44,45 @@ export default function Home() {
     return () => clearInterval(interval); // Clear interval on component unmount
   }, [currentSlide]);
 
+  
+const LazyLoadImage = ({ src, alt, className }) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const imgRef = useRef();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(imgRef.current);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (imgRef.current) {
+      observer.observe(imgRef.current);
+    }
+
+    return () => {
+      if (imgRef.current) {
+        observer.unobserve(imgRef.current);
+      }
+    };
+  }, []);
+
+  return (
+    <div ref={imgRef} className={className}>
+      {isVisible ? (
+              <Image src={src} alt={alt} className={className} placeholder='blur' />
+
+      ) : (
+        <div className="w-full h-full bg-gray-200" />
+      )}
+    </div>
+  );
+};
+
   return (
     <div className="container">
 
@@ -65,7 +103,11 @@ export default function Home() {
                 <p>{slide.description}</p>
                 <Link href={slide.page} className="hero-button">{slide.buttonText}</Link>
                 {/* Add the image with lower opacity */}
-                <Image src={slide.image} alt={slide.title} className="carousel-image" />
+                {/* <Image src={slide.image} alt={slide.title} className="carousel-image" /> */}
+               
+                  <LazyLoadImage src={slide.image} alt={slide.title} className="carousel-image" placeholder="blur"/>
+               
+
                 {/* <LazyLoadImage 
                 src={slide.image} 
                 alt={slide.title} 
