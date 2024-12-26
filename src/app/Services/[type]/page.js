@@ -55,6 +55,20 @@ export default function ServiceType({ params }) {
                       window.location.href = "/Contact";
                     }}
                   />
+                  <br />
+                  <Button
+                    text={"Click download video"}
+                    onClick={() => {
+                      const videoUrl =
+                        "https://damiandicky.oss-cn-beijing.aliyuncs.com/army/202412270026.mp4"; // 替换为你的视频文件的实际 URL
+                      const link = document.createElement("a");
+                      link.href = videoUrl;
+                      link.download = "video.mp4"; // 可以指定下载的文件名
+                      document.body.appendChild(link);
+                      link.click();
+                      document.body.removeChild(link);
+                    }}
+                  />
                 </div>
               </div>
             </div>

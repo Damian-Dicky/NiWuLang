@@ -32,7 +32,7 @@ import Button from "./Components/Button";
 import railway from "./assets/railway.png";
 import lake from "./assets/lake-beautification.png";
 import road from "./assets/warning1.png";
-import fifteen from "./assets/15+.png";
+import fifteen from "./assets/logo.png";
 import gogreen from "./assets/go_green.png";
 import Link from "next/link";
 import Footer from "./Components/Footer";
@@ -156,8 +156,7 @@ export default function Home() {
         <div className="info">
           <div className="info-container">
             <div className="info-head">
-              <Image src={fifteen} alt="15+" width={100} height={100} />
-              <Image src={gogreen} alt="Go Green" width={100} height={100} />
+              <Image src={fifteen} alt="15+" width={200} height={100} />
             </div>
 
             <p>

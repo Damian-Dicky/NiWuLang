@@ -47,6 +47,7 @@ const AboutUs = () => {
       <div className="about-us-container">
         <BlurFade delay={0.25} inView>
           <h2>Company Profile</h2>
+
           <div className="about-profile">
             <div className="about-profile-image"></div>
 
