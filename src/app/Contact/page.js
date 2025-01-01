@@ -43,15 +43,14 @@ export default function Contact() {
             <h3 className="card-title">General Inquiries</h3>
             <p className="card-description">
               For general inquiries, please email us at{" "}
-              <b>wlg10940@vip.sina.cn</b>
+              <b>niwulang@gmail.com</b>
             </p>
           </div>
           <div className="contact-card">
             <PhoneCallIcon size={48} />
             <h3 className="card-title">Sales</h3>
             <p className="card-description">
-              For sales inquiries, please email us at{" "}
-              <b>wlg10940@vip.sina.cn</b>
+              For sales inquiries, please email us at <b>niwulang@gmail.com</b>
             </p>
           </div>
           <div className="contact-card">

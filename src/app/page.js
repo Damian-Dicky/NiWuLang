@@ -359,7 +359,7 @@ export default function Home() {
                   <div className="icon">
                     <MailIcon />
                   </div>
-                  <p>wlg10940@vip.sina.cn</p>
+                  <p>niwulang@gmail.com</p>
                 </div>
               </div>
             </div>
