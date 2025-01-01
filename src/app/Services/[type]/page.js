@@ -31,7 +31,26 @@ export default function ServiceType({ params }) {
                     className="service-image"
                   />
                 </div>
-
+                <iframe
+                  width="560"
+                  height="315"
+                  src="https://www.youtube.com/embed/r-LZ91JUfLI?si=kELIbhbcGSSitLIK"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+                <iframe
+                  width="560"
+                  height="315"
+                  src="https://www.youtube.com/embed/H3P9IjsqI6g?si=5iGOzPAek_rd0lo_"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
                 <div className="service-header">
                   {/* <span className="service-icon">{service.icon}</span> */}
                   {contentWithBreaks.map((line, lineIndex) => {

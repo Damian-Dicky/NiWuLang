@@ -49,7 +49,18 @@ const AboutUs = () => {
           <h2>Company Profile</h2>
 
           <div className="about-profile">
-            <div className="about-profile-image"></div>
+            <div className="about-profile-image">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/C4yYIm-VwhQ?si=Sjn-O0-OImz4fnFD"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
 
             <div className="about-profile-text">
               <p>
