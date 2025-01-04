@@ -345,7 +345,7 @@ export default function Home() {
                     <MapIcon />
                   </div>
                   <p>
-                    Number five JingKouHeCountry industrial park LeiShangCity
+                    Number five JingKouHeCountry industrial park LeShanCity
                     SiChuan provence China
                   </p>
                 </div>

@@ -34,7 +34,7 @@ export default function Contact() {
             <MapIcon size={48} />
             <h3 className="card-title">Address</h3>
             <p className="card-description">
-              Number five JingKouHeCountry industrial park LeiShangCity SiChuan
+              Number five JingKouHeCountry industrial park LeShanCity SiChuan
               provence China
             </p>
           </div>
