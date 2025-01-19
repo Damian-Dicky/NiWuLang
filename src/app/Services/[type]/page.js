@@ -22,6 +22,12 @@ export default function ServiceType({ params }) {
             <div className="service-parent">
               <div className="service-head">
                 <h2>{service.name}</h2>
+                <Button
+                  text={"Contact Us"}
+                  onClick={() => {
+                    window.location.href = "/Contact";
+                  }}
+                />
               </div>
               <div key={index} className="service-card">
                 <iframe
@@ -68,6 +74,17 @@ export default function ServiceType({ params }) {
                   allowfullscreen
                 ></iframe>
 
+                <iframe
+                  width="560"
+                  height="315"
+                  src="https://www.youtube.com/embed/Cq__F7ONq2s?si=8iILoxHOUy8HnJcL"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerpolicy="strict-origin-when-cross-origin"
+                  allowfullscreen
+                ></iframe>
+
                 <div className="service-header">
                   {/* <span className="service-icon">{service.icon}</span> */}
                   {contentWithBreaks.map((line, lineIndex) => {
@@ -84,19 +101,13 @@ export default function ServiceType({ params }) {
                       <br key={lineIndex} />
                     );
                   })}
-
-                  <Button
-                    text={"Contact Us"}
-                    onClick={() => {
-                      window.location.href = "/Contact";
-                    }}
-                  />
                 </div>
               </div>
             </div>
           );
         }
       })}
+
       <Footer />
     </div>
   );
